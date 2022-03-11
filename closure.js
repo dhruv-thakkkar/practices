@@ -1,9 +1,8 @@
-//A function, and a reference to that function's outer scope
-    function outer(){
-        function inner(){
-            return 10;
-        }
-        return inner;
-    }
-var b = outer();
-console.log(b())
+function abc() {
+  function def() {
+    console.log("inside def");
+  }
+  return def;
+}
+let def = abc();
+def();

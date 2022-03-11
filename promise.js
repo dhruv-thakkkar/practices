@@ -10,7 +10,6 @@ The finally method receives a callback which is executed on all promise fulfillm
 Here we can write 'cleanup' code which need to be executed always regardless of promise outcome.
 */
 
-
 let cleanRoom = function () {
   return new Promise(function (res, rej) {
     res("Room is cleaned...");
@@ -49,4 +48,21 @@ Promise.all([cleanRoom(), removeGarbage(), winIceCream()])
   })
   .catch(function (result) {
     console.log(result);
+  });
+
+/* Example 2: The most basic */
+
+let abc = new Promise(function (res, rej) {
+  res("It is resolved..");
+  rej("It is rejected..");
+});
+abc
+  .then(function (msg) {
+    console.log(msg);
+  })
+  .catch(function (msg) {
+    console.log(msg);
+  })
+  .finally(function () {
+    console.log("I will execute always..");
   });
