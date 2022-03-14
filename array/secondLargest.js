@@ -1,12 +1,20 @@
-let array = [1,2,3,4,5,6,7,77,33,101,44,45,100,111,112,114,113];
-let largest = 0;
-let Secondlargest = 0;
-array.forEach(element => {
-    if(element>largest){
-        Secondlargest = largest;
-        largest = element;
-    }else{
-       Secondlargest = element;
-    }
-});
-console.log(Secondlargest)
+let nums = [7,22,100,55,66,44,111];
+
+
+
+function getSecondLargest(nums) {
+    var flarge = 0;
+    var slarge = 0;
+    for (var i = 0; i < nums.length; i++) { 
+            if (flarge < nums[i]) {
+                slarge = flarge;
+                flarge = nums[i];
+            } else if (nums[i] > slarge) { 
+                slarge = nums[i]
+
+            }
+        }
+        return flarge; 
+}
+
+console.log(getSecondLargest(nums))
