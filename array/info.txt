@@ -1,0 +1,14 @@
+let row = grid[i];
+let maxOfThatRow = Math.max(...row);
+let maxOfColumn = 0;
+for (let j = 0; j < row.length; j++) {
+  if (grid[j][i] > maxOfColumn) {
+    maxOfColumn = grid[j][i];
+  }
+}
+let minOfAll = Math.min(maxOfColumn,maxOfThatRow)
+//console.log(minOfAll)
+for (let j = 0; j < row.length; j++) {
+  console.log(row[j])   
+}
+}
