@@ -1,0 +1,17 @@
+<script>
+  const request = fetch("https://restcountries.com/v2/alpha/IN");
+  //const request = fetch("https://restcountries.com/v2/alpha/asdasd"); //to go in CATCH
+  request
+    .then(function (res, rej) {
+      if (res.status != 200) {
+        throw new Error("Wrong Parameters..");
+      }
+      return res.json();
+    })
+    .then(function (data) {
+      console.log(data);
+    })
+    .catch(function (err) {
+      console.log("err---------->", err);
+    });
+</script>
