@@ -1,0 +1,23 @@
+<!-- <script>
+  const Hello = async function () {
+    const request = fetch("https://restcountries.com/v2/alpha/IN");
+    console.log(request);
+    return request;
+  };
+  Hello()
+    .then(function (res) {
+      return res.json();
+    })
+    .then(function (abc) {
+      console.log(abc);
+    });
+</script> -->
+
+<script>
+  const Hello = async function () {
+    const request = await fetch("https://restcountries.com/v2/alpha/IN");
+    let abc = await request.json();
+    console.log(abc);
+  };
+  (Hello())
+</script>

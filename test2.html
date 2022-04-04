@@ -1,0 +1,31 @@
+<script>
+/*   function test() {
+    const data = fetch("https://restcountries.com/v2/alpha/IN");
+    return data;
+  }
+  test()
+    .then(function (res) {
+      if (res.status != 200) {
+        throw new Error("Wrong Parameters..");
+      }
+      return res.json();
+    })
+    .then(function (abc) {
+      console.log(abc);
+    })
+    .catch(function (err) {
+      console.log("err--->", err);
+    })
+    .finally(function (abc) {
+      console.log("in finally........");
+    }); */
+
+    async function test(){
+        const data = await fetch("https://restcountries.com/v2/alpha/IN");
+        let result = await data.json();
+        return (result)
+    } 
+    test().then(function(as){
+        console.log(as)
+    })
+</script>
