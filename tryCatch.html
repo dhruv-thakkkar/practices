@@ -1,0 +1,26 @@
+<!-- <script>
+  try {
+    let a = 1;
+    const b = 1;
+    b = 2;
+  } catch (err) {
+    console.log(err.__proto__);
+    console.log(err.message);
+  }
+</script> -->
+
+<script>
+  async function asdsa() {
+    try {
+      const request = await fetch("https://restcountries.com/v2/alpha/asdasds");
+      if (request.status != 200) {
+        throw new Error("Data not found..");
+      }
+      let abc = await request.json();
+      console.log(abc);
+    } catch (err) {
+      console.log("err--->", err.message);
+    }
+  }
+  asdsa();
+</script>
