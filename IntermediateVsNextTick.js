@@ -1,15 +1,18 @@
-setTimeout(function () {
-  console.log("TIMEOUT 1");
-  setImmediate(function () {
-    console.log("SETIMMEDIATE 1");
-  });
-}, 0);
-setTimeout(function () {
-  console.log("TIMEOUT 2");
-  setImmediate(function () {
-    console.log("SETIMMEDIATE 2");
-  });
-}, 0);
-setTimeout(function () {
-  console.log("TIMEOUT 3");
-}, 0);
+setImmediate(function A() {
+  console.log("1st immediate");
+});
+
+setImmediate(function B() {
+  console.log("2nd immediate");
+});
+
+process.nextTick(function C() {
+  console.log("1st process");
+});
+
+process.nextTick(function D() {
+  console.log("2nd process");
+});
+
+// First event queue ends here
+console.log("program started");
