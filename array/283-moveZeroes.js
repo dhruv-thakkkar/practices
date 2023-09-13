@@ -1,12 +1,13 @@
-let nums = [0, 1, 0, 3, 12];
-
+let nums = [0, 1, 0, 3, 4];
+let zeroCounter = 0;
 for (let i = 0; i < nums.length; i++) {
-  const element = nums[i];
-  if (element == 0) {
-    nums[i] = nums[i + 1];
-    if (nums[i + 1]) {
-      nums[i + 1] = 0;
-    }
+  const currentElement = nums[i];
+  if(currentElement == 0){
+    zeroCounter++
+  }else{
+    let temp = nums[i]
+    nums[i] = 0
+    nums[i-zeroCounter] = temp
   }
 }
-console.log(nums);
+console.log("nums--->",nums)
