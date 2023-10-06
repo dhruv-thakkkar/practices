@@ -1,0 +1,14 @@
+<input type="text" id="name" onkeypress="apiCall()" />
+<script>
+  let debounceTimer;
+  function apiCall() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(
+      () =>
+        console.log(
+          "This is api call for..." + document.getElementById("name").value
+        ),
+      400
+    );
+  }
+</script>
