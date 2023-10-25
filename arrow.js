@@ -7,6 +7,8 @@ const printWithReturn = (name) => {
 console.log(printWithoutReturn("dhruv"))
 console.log(printWithReturn("dhruv"))
 
+
+
 /* Example 3 */
 let me = {
   name: "Ashutosh Verma",
@@ -17,9 +19,9 @@ let me = {
     return this;
 },
 };
-console.log(me.thisInArrow());
+console.log("me.thisInArrow()--->",me.thisInArrow());
 console.log("===============");
-console.log(me.thisInRegular());
+console.log("me.thisInRegular()--->",me.thisInRegular());
 
 
 this.qwe = "why is qwe working ?"
@@ -28,3 +30,7 @@ let arrow = () =>{
     console.log(this)
 }
 console.log(this)
+
+/* Ex : 5 */
+console.log("printWithoutReturnError--->",printWithoutReturnError("dhruv"))
+const printWithoutReturnError = (name) => ("Hello "+name) //Reference Error. Hoisting
