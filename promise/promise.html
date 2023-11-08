@@ -1,0 +1,14 @@
+<script>
+  /* EXAMPLE FOR NORMAL PROMISE */
+  const url = "https://api.gixthub.com/users/dhruv-thakkkar";
+  fetch(url)
+    .then(function (res) {
+      return res.json();
+    })
+    .then(function (res2) {
+      console.log(res2);
+    })
+    .catch(function (err) {
+      console.log("err->", err);
+    });
+</script>

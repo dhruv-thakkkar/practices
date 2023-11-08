@@ -1,0 +1,60 @@
+<script>
+  /*   var head = null;
+  var tail = null;
+  class Node {
+    constructor(val) {
+      this.value = val;
+      this.next = null;
+    }
+  }
+
+  function push(value) {
+    let new_node = new Node(value);
+    new_node.next = head;
+    head = new_node;
+    if (tail == null) {
+      tail = head;
+    }
+  }
+
+  function push_at_end(value) {
+    console.log(JSON.stringify(head));
+    var new_node = new Node(value);
+    tail.next = "X";
+    console.log(JSON.stringify(head));
+    //tail = new_node;
+  }
+
+  function print(head) {
+    //console.log(JSON.stringify(head))
+    var temp = head;
+    while (temp != null) {
+      console.log(temp.value);
+      temp = temp.next;
+    }
+  }
+  push(10);
+  push(11);
+  push_at_end(17);
+ */ //print(head);
+
+  var head = null;
+  var tail = null;
+  class Node {
+    constructor(val) {
+      this.val = val;
+      this.next = null;
+    }
+  }
+  function addFront(val) {
+    var new_node = new Node(val);
+    if(head == null){
+      head = new_node;
+    }
+    head.next = new_node;
+  }
+  addFront(9);
+  addFront(10);
+  addFront(11);
+  console.log(JSON.stringify(head));
+</script>
